@@ -1,4 +1,14 @@
+://github.com v1.1.1 h1:vj9j/u1bqnvCEfJOw19j/itnGuKZunsXP5aq61WMb80=
+://github.com v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/wc3qEeOctyVzqVLqkr7bU7n6/E=
+://github.com v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWRGnVKojKn/1/p838=
+://github.com v1.0.0/go.mod h1:i9UN7v/zICU9K+KCASre3fmNUnQ5sFMdYfmsS2A0Qp4=
+://github.com v0.5.0 h1:1iBnMKXhXgLp88yBAzX+ni77h9fByG9p5r7Q7Wre2pI=
+://github.com v0.5.0/go.mod h1:Yh+774otXf3Aun8z668YJLM3oFstq6TLA/U3EosV+6A=
+://github.com v1.8.1 h1:w7B6lhP8Ea6566LtcPVH4lOR5asYFStTAtzbtzG+E7A=
+://github.com v1.8.1/go.mod h1:w2LPCksbtfklS7iS5Sscv7H3p5fR+06E6hDPh91O6aE=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVBafMKfvkwBpnjU4zxiE9QasS3pGWLX4N07fN280=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznXc8GYBaokwzqtLqnpppaQFVunpTY8zHhE=
 gopkg.in/telebot.v3 v3.2.1 h1:P8f77399Lp5h36YQ6XmH8p6mN5V8L2u0vWjKxO/29D0=
 gopkg.in/telebot.v3 v3.2.1/go.mod h1:p0pZ9h/W/6N9C/p7Zq9v+m0UAt6vOdfpZ8vG6f0W3U8=
+gopkg.in/yaml.v3 v3.0.1 h1:fxVm/GzAzEWqLHmsZ4x6vK86Z73C6pQv85uFmSpTsqw=
+gopkg.in/yaml.v3 v3.0.1/go.mod h1:K4uy9L71LxMJmI21hmHps819nkj4z1ybc6yDte7N074=
