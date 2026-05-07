@@ -1,0 +1,4 @@
+gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVBafMKfvkwBpnjU4zxiE9QasS3pGWLX4N07fN280=
+gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznXc8GYBaokwzqtLqnpppaQFVunpTY8zHhE=
+gopkg.in/telebot.v3 v3.2.1 h1:P8f77399Lp5h36YQ6XmH8p6mN5V8L2u0vWjKxO/29D0=
+gopkg.in/telebot.v3 v3.2.1/go.mod h1:p0pZ9h/W/6N9C/p7Zq9v+m0UAt6vOdfpZ8vG6f0W3U8=
