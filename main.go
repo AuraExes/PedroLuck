@@ -24,7 +24,6 @@ func main() {
 	}
 
 	b.Handle("/luck", func(c telebot.Context) error {
-		rand.Seed(time.Now().UnixNano())
 		luckScore := rand.Intn(101) 
 
 		var result string
