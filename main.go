@@ -6,39 +6,28 @@ import (
 	"os"
 	"time"
 
-	"gopkg.in/telebot.v3"
+	"://github.com"
 )
 
 func main() {
 	token := os.Getenv("BOT_TOKEN")
 
-	pref := telebot.Settings{
+	b, err := telebot.NewBot(telebot.Settings{
 		Token:  token,
 		Poller: &telebot.LongPoller{Timeout: 10 * time.Second},
-	}
+	})
 
-	b, err := telebot.NewBot(pref)
 	if err != nil {
-		fmt.Println("Ошибка при создании бота:", err)
+		fmt.Println(err)
 		return
 	}
 
-	b.Handle("/luck", func(c telebot.Context) error {
-		luckScore := rand.Intn(101) 
-
-		var result string
-		switch {
-		case luckScore == 100:
-			result = "Ты выбьешь всё лучшее. Удача: 100%"
-		case luckScore > 50:
-			result = fmt.Sprintf("Повезло. Удача: %d%%", luckScore)
-		case luckScore > 10:
-			result = fmt.Sprintf("Неплохо. Удача: %d%%", luckScore)
-		default:
-			result = fmt.Sprintf("Сегодня не твой день. Удача: %d%%", luckScore)
-		}
-
-		return c.Send(result)
+	b.Handle("/luck", func(m *telebot.Message) {
+		rand.Seed(time.Now().UnixNano())
+		luckScore := rand.Intn(101)
+		
+		res := fmt.Sprintf("Твоя удача сегодня: %d%%", luckScore)
+		b.Send(m.Chat, res)
 	})
 
 	b.Start()
