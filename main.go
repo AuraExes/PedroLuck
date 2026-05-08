@@ -1,34 +1,24 @@
-package main
+import os
+import random
+import telebot
 
-import (
-	"fmt"
-	"math/rand"
-	"os"
-	"time"
+TOKEN = os.getenv("BOT_TOKEN")
+bot = telebot.TeleBot(TOKEN)
 
-	"://github.com"
-)
+@bot.message_handler(commands=['luck'])
+def send_luck(message):
+    luck_score = random.randint(0, 100)
+    
+    if luck_score == 100:
+        res = "Ты выбил всё лучшее. Удача повышена на: 100%"
+    elif luck_score > 50:
+        res = f"✅ Повезло. Удача повышена на: {luck_score}%"
+    elif luck_score > 10:
+        res = f"Неплохо. Удача повышена на: {luck_score}%"
+    else:
+        res = f"❌ Сегодня не твой день. Удача повышена на: {luck_score}%"
+        
+    bot.reply_to(message, res)
 
-func main() {
-	token := os.Getenv("BOT_TOKEN")
-
-	b, err := telebot.NewBot(telebot.Settings{
-		Token:  token,
-		Poller: &telebot.LongPoller{Timeout: 10 * time.Second},
-	})
-
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-
-	b.Handle("/luck", func(m *telebot.Message) {
-		rand.Seed(time.Now().UnixNano())
-		luckScore := rand.Intn(101)
-		
-		res := fmt.Sprintf("Твоя удача сегодня: %d%%", luckScore)
-		b.Send(m.Chat, res)
-	})
-
-	b.Start()
-}
+if __name__ == "__main__":
+    bot.infinity_polling()
